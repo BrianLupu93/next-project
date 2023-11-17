@@ -1,10 +1,12 @@
+'use client';
+
 import React from 'react';
 import { IconType } from 'react-icons';
 
 interface ButtonProps {
   label: string;
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  disable?: boolean;
+  disabled?: boolean;
   outline?: boolean;
   small?: boolean;
   icon?: IconType;
@@ -13,7 +15,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({
   label,
   onClick,
-  disable,
+  disabled,
   outline,
   small,
   icon: Icon,
@@ -21,6 +23,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       onClick={onClick}
+      disabled={disabled}
       className={`
     relative
     disabled:opacity-70

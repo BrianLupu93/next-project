@@ -2,7 +2,7 @@ import { Nunito } from 'next/font/google';
 import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from './components/navbar/Navbar';
-import Modal from './components/modals/Modal';
+import RegisterModal from './components/modals/RegisterModal';
 
 export const metadata: Metadata = {
   title: 'Airbnb',
@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={font.className}>
         <Navbar />
-        <Modal isOpen title='Hello There' />
+        <RegisterModal />
         {children}
       </body>
     </html>
